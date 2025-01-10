@@ -1,8 +1,8 @@
 'use client'
 
-import { LogoDXAnimation } from '@/shared/components/logo-dx/Logo-DX-Animation'
+import { LogoDXAnimation } from '@/app/utils/logo-dx/Logo-DX-Animation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LoadingProgressBar } from '@/shared/components/loading-progress-bar/LoadingProgressBar'
+import { LoadingProgressBar } from '@/app/utils/loading-progress-bar/LoadingProgressBar'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
