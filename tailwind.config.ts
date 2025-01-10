@@ -7,6 +7,13 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      zinc: {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        ...require('tailwindcss/colors').zinc,
+        200: '#E8E8E8',
+      },
+    },
     extend: {
       height: {
         'full-svh': '100svh',
