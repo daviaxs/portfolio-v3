@@ -23,13 +23,13 @@ export default function InitialPage() {
     }
   }, [dalay])
 
-  // useEffect(() => {
-  //   if (exit) {
-  //     setTimeout(() => {
-  //       router.push('/site')
-  //     }, 600)
-  //   }
-  // }, [exit, router])
+  useEffect(() => {
+    if (exit) {
+      setTimeout(() => {
+        router.push('/site')
+      }, 600)
+    }
+  }, [exit, router])
 
   return (
     <AnimatePresence>
