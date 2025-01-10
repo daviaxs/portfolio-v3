@@ -1,0 +1,7 @@
+  .item {
+    @apply h-[150px] stroke-zinc-500;
+    overflow: visible;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }

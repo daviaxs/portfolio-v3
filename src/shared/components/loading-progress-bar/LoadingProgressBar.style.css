@@ -1,0 +1,37 @@
+.loader {
+  width: 60%;
+  height: 4.8px;
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  background: #71717A;
+  border-radius: 99px;
+}
+
+.loader::after {
+  content: '';
+  width: 192px;
+  height: 4.8px;
+
+  background: #8B5CF6;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
