@@ -5,5 +5,5 @@ interface DashboardLayoutProps {
 }
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
-  return <>{children}</>
+  return <div className="flex p-4 gap-4">{children}</div>
 }
