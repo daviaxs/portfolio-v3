@@ -21,6 +21,11 @@ export default {
         'display-xl': '60px',
         'display-2xl': '72px',
       },
+      borderRadius: {
+        small: '6px',
+        medium: '12px',
+        large: '24px',
+      },
       height: {
         'full-svh': '100svh',
       },
