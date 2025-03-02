@@ -1,3 +1,4 @@
+import { Sidebar } from '@/shared/components/sidebar/Sidebar'
 import { ReactNode } from 'react'
 
 interface DashboardLayoutProps {
@@ -5,5 +6,10 @@ interface DashboardLayoutProps {
 }
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
-  return <div className="flex p-4 gap-4">{children}</div>
+  return (
+    <div className="flex p-4 gap-4 h-screen w-screen">
+      <Sidebar />
+      <main>{children}</main>
+    </div>
+  )
 }
