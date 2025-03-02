@@ -15,7 +15,7 @@ export function LogoDXAnimation({ ...props }: LogoDXAnimationProps) {
     visible: {
       opacity: 1,
       pathLength: 1,
-      fill: '#71717A',
+      fill: '#8E8E93',
     },
   }
 

@@ -7,7 +7,7 @@
     @apply font-roboto;
   }
   body {
-    @apply h-full-svh bg-zinc-200 text-zinc-900 overflow-hidden mx-auto;
+    @apply h-full-svh bg-gray-light-50 text-gray-dark-50 dark:bg-gray-dark-50 dark:text-gray-light-50 overflow-hidden mx-auto;
   }
   html {
     -webkit-text-size-adjust: 100%;
