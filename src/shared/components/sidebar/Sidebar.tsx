@@ -9,10 +9,10 @@ import { DropdownButton } from '@/shared/components/buttons/DropdownButton'
 import { useThemeToggle } from '@/shared/hooks/useThemeToggle'
 
 const navigationItems = [
-  { href: '/site/sobre', icon: <User size={20} />, text: 'Sobre mim' },
-  { href: '/site/projetos', icon: <Briefcase size={20} />, text: 'Projetos' },
-  { href: '/site/contato', icon: <Mail size={20} />, text: 'Fale comigo' },
-  { href: '/site/blog', icon: <FileText size={20} />, text: 'Blog' },
+  { href: '/', icon: <User size={20} />, text: 'Sobre mim' },
+  { href: '/projetos', icon: <Briefcase size={20} />, text: 'Projetos' },
+  { href: '/contato', icon: <Mail size={20} />, text: 'Fale comigo' },
+  { href: '/blog', icon: <FileText size={20} />, text: 'Blog' },
 ]
 
 const languageOptions = [
