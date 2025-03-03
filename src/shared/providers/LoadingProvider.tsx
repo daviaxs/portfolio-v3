@@ -1,14 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { LogoDXAnimation } from '@/app/utils/logo-dx/Logo-DX-Animation'
 import { LoadingProgressBar } from '@/app/utils/loading-progress-bar/LoadingProgressBar'
 
 export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [showLoading, setShowLoading] = useState(true)
-  const pathname = usePathname()
 
   useEffect(() => {
     // Só mostra o loading na primeira visita
