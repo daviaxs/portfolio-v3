@@ -3,11 +3,13 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react'
+import { cn } from '@/lib/utils/cn'
 
 interface NavButtonProps {
   href: string
   icon: ReactNode
   text: string
+  active?: boolean
 }
 
 export function NavButton({ href, icon, text }: NavButtonProps) {
@@ -17,11 +19,13 @@ export function NavButton({ href, icon, text }: NavButtonProps) {
   return (
     <Link href={href}>
       <div
-        className={`flex items-center w-full h-11 px-2 rounded-md transition-colors ${
+        className={cn(
+          'flex items-center w-full h-11 px-2 rounded-medium transition-colors cursor-pointer',
+
           isActive
-            ? 'bg-gray-light-50 shadow-sm dark:bg-gray-dark-50'
-            : 'bg-transparent hover:bg-gray-light-200 dark:hover:bg-gray-dark-200'
-        }`}
+            ? 'bg-gray-light-50 dark:bg-gray-dark-200 shadow-[0px_4px_4px_rgba(0,0,0,08%)]'
+            : 'bg-transparent shadow-none hover:bg-gray-light-200 dark:hover:bg-gray-dark-50',
+        )}
       >
         {icon}
         <span className="ml-2 text-md font-medium">{text}</span>

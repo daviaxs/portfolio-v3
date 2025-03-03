@@ -18,7 +18,6 @@ const navigationItems = [
 const languageOptions = [
   { value: 'pt', label: 'Português' },
   { value: 'en', label: 'Inglês' },
-  { value: 'es', label: 'Espanhol' },
 ]
 
 const themeOptions = [
@@ -100,7 +99,7 @@ export function Sidebar() {
       </nav>
 
       {/* Perfil */}
-      <div className="flex items-center justify-start gap-2 bg-gray-light-50 p-2 rounded-medium w-full h-fit">
+      <div className="flex items-center justify-start gap-2 bg-gray-light-50 dark:bg-gray-dark-50 p-2 rounded-medium w-full h-fit">
         <Image
           src="/imgs/avatar_daviaxs.jpg"
           alt="avatar"

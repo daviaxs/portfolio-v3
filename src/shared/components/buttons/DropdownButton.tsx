@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { ChevronsUpDown, Check } from 'lucide-react'
+import { ChevronsUpDown } from 'lucide-react'
 import { cn } from '@/lib/utils/cn'
 
 export interface DropdownButtonProps {
@@ -50,9 +50,10 @@ export function DropdownButton({
       <button
         type="button"
         className={cn(
-          'flex items-center justify-between w-full h-11 px-2 rounded-md transition-colors',
+          'flex items-center justify-between w-full h-11 px-2 rounded-medium transition-colors',
+
           open
-            ? 'bg-gray-light-50 shadow-sm dark:bg-gray-dark-50'
+            ? 'bg-gray-light-50 dark:bg-gray-dark-50 shadow-[0px_4px_4px_rgba(0,0,0,08%)]'
             : 'bg-transparent hover:bg-gray-light-200 dark:hover:bg-gray-dark-200',
         )}
         onClick={() => setOpen((prev) => !prev)}
@@ -71,21 +72,19 @@ export function DropdownButton({
         <ChevronsUpDown size={16} />
       </button>
       {open && (
-        <div className="absolute z-10 mt-1 w-full rounded-md bg-white dark:bg-gray-800 shadow-lg">
-          <ul className="max-h-60 overflow-auto py-1">
+        <div className="absolute z-10 mt-2 w-full rounded-medium p-2 bg-gray-light-50 dark:bg-gray-dark-50">
+          <ul className="flex flex-col max-h-60 overflow-auto gap-1">
             {options.map((option) => (
               <li
                 key={option.value}
-                className="flex items-center px-2 py-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
+                className={cn(
+                  'flex items-center h-[2.75rem] rounded-medium px-2 cursor-pointer hover:bg-gray-light-100 dark:hover:bg-gray-dark-100',
+                  value === option.value &&
+                    'bg-gray-light-100 dark:bg-gray-dark-100',
+                )}
                 onClick={() => handleSelect(option.value)}
               >
-                <Check
-                  className={cn(
-                    'mr-2 h-4 w-4 transition-opacity',
-                    value === option.value ? 'opacity-100' : 'opacity-0',
-                  )}
-                />
-                {option.label}
+                <p className="text-md font-medium">{option.label}</p>
               </li>
             ))}
           </ul>
