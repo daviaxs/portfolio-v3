@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Globe, User, Briefcase, Mail, FileText, Moon } from 'lucide-react'
 import { NavButton } from '@/shared/components/buttons/NavButton'
 import { DropdownButton } from '@/shared/components/buttons/DropdownButton'
 import { useThemeToggle } from '@/shared/hooks/useThemeToggle'
 import { ProfileFooter } from './ProfileFooter'
+import { useLanguage } from '@/shared/contexts/LanguageContext'
 
 const navigationItems = [
   { href: '/', icon: <User size={20} />, text: 'Sobre mim' },
@@ -15,31 +15,31 @@ const navigationItems = [
   { href: '/blog', icon: <FileText size={20} />, text: 'Blog' },
 ]
 
-const languageOptions = [
-  { value: 'pt', label: 'Português' },
-  { value: 'en', label: 'Inglês' },
-]
-
 const themeOptions = [
   { value: 'light', label: 'Claro' },
   { value: 'dark', label: 'Escuro' },
 ]
 
+const languageOptions = [
+  { value: 'pt-br', label: 'Português' },
+  { value: 'en', label: 'Inglês' },
+]
+
 export function Sidebar() {
   const pathname = usePathname()
-  const [selectedLanguage, setSelectedLanguage] = useState('pt')
+  const { language, changeLanguage } = useLanguage()
   const { theme, toggleTheme, mounted } = useThemeToggle()
 
   if (!mounted) return null
 
   const currentLanguage = languageOptions.find(
-    (lang) => lang.value === selectedLanguage,
+    (lang) => lang.value === language,
   )?.label
 
   const currentTheme = themeOptions.find((item) => item.value === theme)?.label
 
   const handleLanguageSelect = (value: string) => {
-    setSelectedLanguage(value)
+    changeLanguage(value)
   }
 
   const handleThemeSelect = (value: string) => {
