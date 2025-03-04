@@ -9,17 +9,16 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [showLoading, setShowLoading] = useState(true)
 
   useEffect(() => {
-    // Só mostra o loading na primeira visita
     if (sessionStorage.getItem('firstVisit')) {
       setShowLoading(false)
     } else {
       sessionStorage.setItem('firstVisit', 'false')
-      setTimeout(() => setShowLoading(false), 2000) // Tempo do loading
+      setTimeout(() => setShowLoading(false), 2500)
     }
   }, [])
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {showLoading ? (
         <motion.div
           className="flex flex-col justify-center items-center w-full h-full fixed inset-0 bg-gray-light-50 dark:bg-gray-dark-50"
@@ -42,7 +41,14 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
           </p>
         </motion.div>
       ) : (
-        children
+        <motion.div
+          className="flex flex-1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        >
+          {children}
+        </motion.div>
       )}
     </AnimatePresence>
   )
