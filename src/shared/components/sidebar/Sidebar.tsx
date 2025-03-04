@@ -1,18 +1,39 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { Globe, User, Briefcase, Mail, FileText, Moon } from 'lucide-react'
+import { Globe, Moon } from 'lucide-react'
 import { NavButton } from '@/shared/components/buttons/NavButton'
 import { DropdownButton } from '@/shared/components/buttons/DropdownButton'
 import { useThemeToggle } from '@/shared/hooks/useThemeToggle'
 import { ProfileFooter } from './ProfileFooter'
 import { useLanguage } from '@/shared/contexts/LanguageContext'
+import { Icons } from '../Icons'
 
 const navigationItems = [
-  { href: '/', icon: <User size={20} />, text: 'Sobre mim' },
-  { href: '/projetos', icon: <Briefcase size={20} />, text: 'Projetos' },
-  { href: '/contato', icon: <Mail size={20} />, text: 'Fale comigo' },
-  { href: '/blog', icon: <FileText size={20} />, text: 'Blog' },
+  {
+    href: '/',
+    icon: (
+      <Icons.Person className="text-gray-dark-50 dark:text-gray-light-50" />
+    ),
+    text: 'Sobre mim',
+  },
+  {
+    href: '/projetos',
+    icon: <Icons.Star className="text-gray-dark-50 dark:text-gray-light-50" />,
+    text: 'Projetos',
+  },
+  {
+    href: '/contato',
+    icon: <Icons.Chat className="text-gray-dark-50 dark:text-gray-light-50" />,
+    text: 'Fale comigo',
+  },
+  {
+    href: '/blog',
+    icon: (
+      <Icons.Folder className="text-gray-dark-50 dark:text-gray-light-50" />
+    ),
+    text: 'Blog',
+  },
 ]
 
 const themeOptions = [

@@ -20,7 +20,7 @@ export function NavButton({ href, icon, text }: NavButtonProps) {
     <Link href={href}>
       <div
         className={cn(
-          'flex items-center w-full h-11 px-2 rounded-medium transition-colors cursor-pointer',
+          'flex items-center w-full h-11 gap-2 px-2 rounded-medium transition-colors cursor-pointer',
 
           isActive
             ? 'bg-gray-light-50 dark:bg-gray-dark-200 shadow-[0px_4px_4px_rgba(0,0,0,08%)]'
@@ -28,7 +28,7 @@ export function NavButton({ href, icon, text }: NavButtonProps) {
         )}
       >
         {icon}
-        <span className="ml-2 text-md font-medium">{text}</span>
+        <span className="text-md font-medium">{text}</span>
       </div>
     </Link>
   )
