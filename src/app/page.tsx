@@ -7,7 +7,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1>{text.buttonText}</h1>
+      <h1>{text.sidebar?.navTitle}</h1>
       <button onClick={() => changeLanguage('pt-br')}>Toggle Language</button>
       <button onClick={() => changeLanguage('en')}>Toggle Language</button>
     </div>

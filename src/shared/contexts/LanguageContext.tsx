@@ -1,4 +1,3 @@
-// LanguageContext.tsx
 'use client'
 
 import {
@@ -13,7 +12,8 @@ type Language = string
 
 interface LanguageContextProps {
   language: Language
-  text: { [key: string]: string }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  text: Record<string, any>
   changeLanguage: (lang: Language) => void
 }
 

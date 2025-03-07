@@ -1,3 +1,19 @@
 {
-  "buttonText": "Clique em mim"
+  "sidebar": {
+    "title": "Navegar",
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "contact": "Fale comigo",
+    "blog": "Blog",
+    "rule": "UI/UX Designer & Web Developer",
+    "settings": {
+      "title": "Configurações",
+      "language": "Idioma",
+      "theme": "Tema",
+      "light": "Claro",
+      "dark": "Escuro",
+      "ptbr": "Português",
+      "en": "English"
+    }
+  }
 }

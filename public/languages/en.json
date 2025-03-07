@@ -1,3 +1,19 @@
 {
-  "buttonText": "Click me"
+  "sidebar": {
+    "title": "Browse",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact Me",
+    "blog": "Blog",
+    "rule": "UI/UX Designer & Web Developer",
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "ptbr": "Portuguese",
+      "en": "English"
+    }
+  }
 }
