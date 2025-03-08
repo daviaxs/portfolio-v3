@@ -53,8 +53,8 @@ export function DropdownButton({
           'flex items-center justify-between w-full h-11 px-2 rounded-medium transition-colors',
 
           open
-            ? 'bg-gray-light-50 dark:bg-gray-dark-50 shadow-[0px_4px_4px_rgba(0,0,0,08%)]'
-            : 'bg-transparent hover:bg-gray-light-200 dark:hover:bg-gray-dark-200',
+            ? 'bg-gray-light-50 dark:bg-gray-dark-200 shadow-[0px_4px_4px_rgba(0,0,0,08%)]'
+            : 'bg-transparent hover:bg-gray-light-200 dark:hover:bg-gray-dark-50',
         )}
         onClick={() => setOpen((prev) => !prev)}
       >
