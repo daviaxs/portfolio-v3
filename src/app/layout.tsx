@@ -30,7 +30,9 @@ export default function RootLayout({
           <LanguageProvider>
             <LoadingProvider>
               <Sidebar />
-              <main className="flex-1 p-4">{children}</main>
+              <main className="flex flex-col gap-12 flex-1 p-4">
+                {children}
+              </main>
             </LoadingProvider>
           </LanguageProvider>
         </ThemeProvider>

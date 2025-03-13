@@ -1,5 +1,7 @@
 'use client'
 
+import { Badge } from '@/shared/components/Badge'
+import { Icons } from '@/shared/components/Icons'
 import { useLanguage } from '@/shared/contexts/LanguageContext'
 import Image from 'next/image'
 
@@ -8,7 +10,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex flex-col w-full h-24">
+      <div className="flex flex-col w-full">
         <div className="relative w-full h-[200px] ">
           <Image
             src="/imgs/banner.png"
@@ -39,6 +41,18 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full px-8 gap-8">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-display-xs font-medium">Ferramentas</h3>
+
+          <ul className="flex flex-wrap w-full gap-2">
+            <li>
+              <Badge icon={<Icons.Figma />} text="Figma" />
+            </li>
+          </ul>
         </div>
       </div>
     </>
