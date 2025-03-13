@@ -8,6 +8,68 @@ import Image from 'next/image'
 export default function HomePage() {
   const { text, changeLanguage } = useLanguage()
 
+  const tools = [
+    {
+      icon: <Icons.Figma />,
+      text: 'Figma',
+    },
+    {
+      icon: (
+        <Icons.NextJS className="text-gray-dark-50 dark:text-gray-light-50" />
+      ),
+      text: 'Next.js',
+    },
+    {
+      icon: <Icons.Typescript />,
+      text: 'Typescript',
+    },
+    {
+      icon: <Icons.Javascript />,
+      text: 'JavaScript',
+    },
+    {
+      icon: <Icons.TailwindCSS />,
+      text: 'TailwindCSS',
+    },
+    {
+      icon: <Icons.AfterEffects />,
+      text: 'After Effects',
+    },
+    {
+      icon: <Icons.Photoshop />,
+      text: 'Photoshop',
+    },
+
+    {
+      icon: <Icons.ReactJS />,
+      text: 'React JS',
+    },
+    {
+      icon: <Icons.NodeJS />,
+      text: 'Node',
+    },
+    {
+      icon: (
+        <Icons.Prisma className="text-gray-dark-50 dark:text-gray-light-50" />
+      ),
+      text: 'Prisma',
+    },
+    {
+      icon: (
+        <Icons.Fastify className="text-gray-dark-50 dark:text-gray-light-50" />
+      ),
+      text: 'Fastify',
+    },
+    {
+      icon: <Icons.Css />,
+      text: 'CSS',
+    },
+    {
+      icon: <Icons.Git />,
+      text: 'Git',
+    },
+  ]
+
   return (
     <>
       <div className="flex flex-col w-full">
@@ -21,6 +83,7 @@ export default function HomePage() {
             quality={100}
           />
         </div>
+
         <div className="z-10 flex w-full h-fit gap-6 px-8">
           <Image
             src="/imgs/avatar.png"
@@ -36,9 +99,14 @@ export default function HomePage() {
               <p className="text-display-sm font-semibold text-gray-dark-50 dark:text-gray-light-50">
                 Davi Alves
               </p>
-              <p className="text-md font-normal text-gray-dark-400 dark:text-gray-light-500">
-                São Paulo, Brasil
-              </p>
+
+              <div className="flex items-center justify-center gap-2">
+                <Icons.Brasil />
+
+                <p className="text-md font-normal text-gray-dark-400 dark:text-gray-light-500">
+                  São Paulo, Brasil
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -49,9 +117,11 @@ export default function HomePage() {
           <h3 className="text-display-xs font-medium">Ferramentas</h3>
 
           <ul className="flex flex-wrap w-full gap-2">
-            <li>
-              <Badge icon={<Icons.Figma />} text="Figma" />
-            </li>
+            {tools.map((tool) => (
+              <li key={tool.text}>
+                <Badge icon={tool.icon} text={tool.text} />
+              </li>
+            ))}
           </ul>
         </div>
       </div>
