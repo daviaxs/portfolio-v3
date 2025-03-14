@@ -126,6 +126,32 @@ export default function HomePage() {
             ))}
           </ul>
         </div>
+
+        <span className="w-full h-px bg-gray-light-200 dark:bg-gray-dark-200 rounded" />
+
+        <div className="flex gap-16">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-display-xs font-medium">Sobre mim</h3>
+
+            <p className="font-normal text-gray-dark-300 dark:text-gray-light-300">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever since the 1500s, when an unknown printer took a
+              <br />
+              <br />
+              five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s
+              with the release of Letraset sheets containing Lorem Ipsum
+              passages, and more recently with desktop publishing software like
+              Aldus PageMaker
+              <br />
+              <br />
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              and typesetting industry. Lorem Ipsum has been th.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   )
