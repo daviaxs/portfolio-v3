@@ -6,7 +6,7 @@ import { useLanguage } from '@/shared/contexts/LanguageContext'
 import Image from 'next/image'
 
 export default function HomePage() {
-  const { text, changeLanguage } = useLanguage()
+  const { text } = useLanguage()
 
   const tools = [
     {
@@ -114,7 +114,9 @@ export default function HomePage() {
 
       <div className="flex flex-col w-full px-8 gap-8">
         <div className="flex flex-col gap-4">
-          <h3 className="text-display-xs font-medium">Ferramentas</h3>
+          <h3 className="text-display-xs font-medium">
+            {text.aboutPage?.toolsTitle}
+          </h3>
 
           <ul className="flex flex-wrap w-full gap-2">
             {tools.map((tool) => (

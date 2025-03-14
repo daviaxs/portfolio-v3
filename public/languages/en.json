@@ -15,5 +15,8 @@
       "ptbr": "Portuguese",
       "en": "English"
     }
+  },
+  "aboutPage": {
+    "toolsTitle": "Tools"
   }
 }

@@ -15,5 +15,8 @@
       "ptbr": "Português",
       "en": "English"
     }
+  },
+  "aboutPage": {
+    "toolsTitle": "Ferramentas"
   }
 }
