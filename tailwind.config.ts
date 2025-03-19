@@ -36,6 +36,10 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
 
+        red: {
+          '50': '#ED4245',
+        },
+
         'gray-light': {
           '50': '#F2F2F7',
           '100': '#E5E5EA',
