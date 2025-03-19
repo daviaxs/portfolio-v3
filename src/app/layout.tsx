@@ -30,8 +30,8 @@ export default function RootLayout({
           <LanguageProvider>
             <LoadingProvider>
               <Sidebar />
-              <main className="flex flex-col gap-12 flex-1 p-4 overflow-y-auto">
-                {children}
+              <main className="flex flex-col items-center gap-12 flex-1 p-4 overflow-y-auto">
+                <div className="max-w-[1500px]">{children}</div>
               </main>
             </LoadingProvider>
           </LanguageProvider>
