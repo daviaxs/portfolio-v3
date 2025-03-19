@@ -124,19 +124,15 @@ export default function HomePage() {
                 Davi Alves
               </p>
 
-              <div className="flex items-center justify-center gap-2">
-                <Icons.Brasil />
-
-                <p className="text-md font-normal text-gray-dark-400 dark:text-gray-light-500">
-                  São Paulo, Brasil
-                </p>
-              </div>
+              <p className="text-md font-normal text-gray-dark-400 dark:text-gray-light-500">
+                Pleno UI/UX Designer & Frontend
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col w-full px-8 gap-8">
+      <div className="flex flex-col w-full px-8 gap-8 mt-8">
         <div className="flex flex-col gap-4">
           <h3 className="text-display-xs font-medium">
             {text.aboutPage?.toolsTitle}
@@ -182,11 +178,15 @@ export default function HomePage() {
                 <p className="uppercase text-xs text-gray-dark-400">
                   {link.title}
                 </p>
-                <div>
-                  <Link href={link.link} target="_blank">
-                    {link.text}
-                  </Link>
-                </div>
+                <Link
+                  href={link.link}
+                  target="_blank"
+                  className="flex items-center justify-start gap-2"
+                >
+                  {link.text}
+
+                  <Icons.Link size={12} />
+                </Link>
               </div>
             ))}
           </div>
