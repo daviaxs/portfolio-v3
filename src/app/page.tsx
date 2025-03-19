@@ -4,6 +4,7 @@ import { Badge } from '@/shared/components/Badge'
 import { Icons } from '@/shared/components/Icons'
 import { useLanguage } from '@/shared/contexts/LanguageContext'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function HomePage() {
   const { text } = useLanguage()
@@ -67,6 +68,29 @@ export default function HomePage() {
     {
       icon: <Icons.Git />,
       text: 'Git',
+    },
+  ]
+
+  const links = [
+    {
+      title: 'Email',
+      link: 'mailto:eu@daviaxs.com',
+      text: 'eu@daviaxs.com',
+    },
+    {
+      title: 'Whatsapp',
+      link: 'https://wa.me/+5511979587699',
+      text: 'whatsapp.com',
+    },
+    {
+      title: 'Dribbble',
+      link: 'https://dribbble.com/daviaxs',
+      text: 'dribbble.com',
+    },
+    {
+      title: 'Github',
+      link: 'https://github.com/daviaxs',
+      text: 'github.com',
     },
   ]
 
@@ -150,6 +174,21 @@ export default function HomePage() {
               containing Lorem Ipsum passages, and more recently with desktop
               and typesetting industry. Lorem Ipsum has been th.
             </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {links.map((link) => (
+              <div key={link.link} className="flex flex-col">
+                <p className="uppercase text-xs text-gray-dark-400">
+                  {link.title}
+                </p>
+                <div>
+                  <Link href={link.link} target="_blank">
+                    {link.text}
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
