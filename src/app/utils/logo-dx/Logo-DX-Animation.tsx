@@ -2,10 +2,23 @@
 
 import { MotionProps, motion } from 'framer-motion'
 import './logoDX.css'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 type LogoDXAnimationProps = MotionProps
 
 export function LogoDXAnimation({ ...props }: LogoDXAnimationProps) {
+  const { theme } = useTheme()
+  const [fillColor, setFillColor] = useState('#8E8E93')
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      setFillColor('#ffffff')
+    } else {
+      setFillColor('#8E8E93')
+    }
+  }, [theme])
+
   const icon = {
     hidden: {
       opacity: 0,
@@ -15,7 +28,7 @@ export function LogoDXAnimation({ ...props }: LogoDXAnimationProps) {
     visible: {
       opacity: 1,
       pathLength: 1,
-      fill: '#8E8E93',
+      fill: fillColor,
     },
   }
 
