@@ -63,11 +63,11 @@ export function Sidebar() {
       text: text.sidebar?.contact,
     },
     {
-      href: '/blog',
+      href: '/artigos',
       icon: (
-        <Icons.Folder className="text-gray-dark-50 dark:text-gray-light-50" />
+        <Icons.Book className="text-gray-dark-50 dark:text-gray-light-50" />
       ),
-      text: text.sidebar?.blog,
+      text: text.sidebar?.articles,
     },
   ]
 
