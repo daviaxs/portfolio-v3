@@ -17,8 +17,8 @@ export function Sidebar() {
   if (!mounted) return null
 
   const languageOptions = [
-    { value: 'pt-br', label: 'Português' },
-    { value: 'en', label: 'Inglês' },
+    { value: 'pt-br', label: text.sidebar?.settings?.ptbr },
+    { value: 'en', label: text.sidebar?.settings?.en },
   ]
 
   const currentLanguage = languageOptions.find(
