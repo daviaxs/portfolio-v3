@@ -38,6 +38,7 @@ export default {
 
         red: {
           '50': '#ED4245',
+          '100': '#B6292B',
         },
 
         'gray-light': {
