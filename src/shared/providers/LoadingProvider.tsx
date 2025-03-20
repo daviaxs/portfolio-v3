@@ -6,14 +6,14 @@ import { LogoDXAnimation } from '@/app/utils/logo-dx/Logo-DX-Animation'
 import { LoadingProgressBar } from '@/app/utils/loading-progress-bar/LoadingProgressBar'
 
 export function LoadingProvider({ children }: { children: React.ReactNode }) {
-  const [showLoading, setShowLoading] = useState(true)
+  const [showLoading, setShowLoading] = useState(false)
 
   useEffect(() => {
-    if (sessionStorage.getItem('firstVisit')) {
-      setShowLoading(false)
-    } else {
+    if (!sessionStorage.getItem('firstVisit')) {
       sessionStorage.setItem('firstVisit', 'false')
-      setTimeout(() => setShowLoading(false), 2500)
+      setShowLoading(true)
+      const timer = setTimeout(() => setShowLoading(false), 2500)
+      return () => clearTimeout(timer)
     }
   }, [])
 
@@ -21,6 +21,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
     <AnimatePresence mode="wait">
       {showLoading ? (
         <motion.div
+          key="loading-screen"
           className="flex flex-col justify-center items-center w-full h-full fixed inset-0 bg-gray-light-50 dark:bg-gray-dark-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -33,6 +34,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
               animate={{ scale: 1 }}
               transition={{ duration: 1, ease: 'easeInOut' }}
             />
+
             <LoadingProgressBar />
           </motion.div>
 
@@ -42,6 +44,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
         </motion.div>
       ) : (
         <motion.div
+          key="main-content"
           className="flex flex-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

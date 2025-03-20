@@ -1,8 +1,14 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import './LoadingProgressBar.style.css'
 
-type LoadingProgressBarProps = React.HTMLAttributes<HTMLSpanElement>
-
-export function LoadingProgressBar({ ...props }: LoadingProgressBarProps) {
-  return <span className="loader" {...props}></span>
+export function LoadingProgressBar() {
+  return (
+    <motion.div
+      className="loader"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.7 }}
+    />
+  )
 }
