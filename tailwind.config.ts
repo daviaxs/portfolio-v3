@@ -27,7 +27,7 @@ export default {
         large: '24px',
       },
       boxShadow: {
-        badge: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        1: '0 2px 4px rgba(0, 0, 0, 0.1)',
       },
       height: {
         'full-svh': '100svh',
