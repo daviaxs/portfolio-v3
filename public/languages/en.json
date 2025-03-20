@@ -4,7 +4,7 @@
     "about": "About Me",
     "projects": "Projects",
     "contact": "Contact Me",
-    "blog": "Blog",
+    "articles": "Articles",
     "rule": "UI/UX Designer & Web Developer",
     "settings": {
       "title": "Settings",
@@ -17,6 +17,9 @@
     }
   },
   "aboutPage": {
-    "toolsTitle": "Tools"
+    "jobTitle": "Mid-level UI/UX Designer & Frontend Developer",
+    "toolsTitle": "Tools",
+    "aboutTitle": "About me",
+    "contactButton": "Contact me"
   }
 }

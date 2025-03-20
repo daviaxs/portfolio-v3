@@ -4,7 +4,7 @@
     "about": "Sobre mim",
     "projects": "Projetos",
     "contact": "Fale comigo",
-    "blog": "Blog",
+    "articles": "Artigos",
     "rule": "UI/UX Designer & Web Developer",
     "settings": {
       "title": "Configurações",
@@ -17,6 +17,9 @@
     }
   },
   "aboutPage": {
-    "toolsTitle": "Ferramentas"
+    "jobTitle": "Pleno UI/UX Designer & Desenvolvedor Frontend",
+    "toolsTitle": "Ferramentas",
+    "aboutTitle": "Sobre mim",
+    "contactButton": "Fale comigo"
   }
 }
