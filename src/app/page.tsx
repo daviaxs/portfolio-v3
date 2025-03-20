@@ -1,6 +1,7 @@
 'use client'
 
 import { Badge } from '@/shared/components/Badge'
+import { Button } from '@/shared/components/buttons/Button'
 import { Icons } from '@/shared/components/Icons'
 import { useLanguage } from '@/shared/contexts/LanguageContext'
 import Image from 'next/image'
@@ -118,16 +119,21 @@ export default function HomePage() {
             className="rounded-full border-4 border-white dark:border-gray-dark-50 shadow-[0px_12px_16px_-4px_rgba(0,0,0,0.08)]"
           />
 
-          <div className="flex pt-16">
+          <div className="flex justify-between w-full pt-16">
             <div className="flex flex-col">
               <p className="text-display-sm font-semibold text-gray-dark-50 dark:text-gray-light-50">
                 Davi Alves
               </p>
 
               <p className="text-md font-normal text-gray-dark-400 dark:text-gray-light-500">
-                Pleno UI/UX Designer & Frontend
+                {text.aboutPage?.jobTitle}
               </p>
             </div>
+
+            <Button>
+              <Icons.Chat2 className="text-gray-light-50" />
+              {text.aboutPage?.contactButton}
+            </Button>
           </div>
         </div>
       </div>
@@ -151,7 +157,9 @@ export default function HomePage() {
 
         <div className="flex gap-16">
           <div className="flex flex-col gap-4">
-            <h3 className="text-display-xs font-medium">Sobre mim</h3>
+            <h3 className="text-display-xs font-medium">
+              {text.aboutPage?.aboutTitle}
+            </h3>
 
             <p className="font-normal text-gray-dark-300 dark:text-gray-light-300">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -181,7 +189,7 @@ export default function HomePage() {
                 <Link
                   href={link.link}
                   target="_blank"
-                  className="flex items-center justify-start gap-2"
+                  className="flex items-center justify-start gap-2 hover:underline"
                 >
                   {link.text}
 
