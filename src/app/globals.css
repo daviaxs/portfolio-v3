@@ -8,6 +8,8 @@
   }
   body {
     @apply flex h-full-svh bg-gray-light-50 text-gray-dark-50 dark:bg-gray-dark-50 dark:text-gray-light-50 overflow-hidden mx-auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   html {
     -webkit-text-size-adjust: 100%;
