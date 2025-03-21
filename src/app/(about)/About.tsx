@@ -9,7 +9,7 @@ export function About() {
         {text.aboutPage?.aboutTitle}
       </h3>
 
-      <p className="font-normal text-gray-dark-300 dark:text-gray-light-300">
+      <p className="text-gray-dark-300 dark:text-gray-light-300">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry&apos;s standard dummy text
         ever since the 1500s, when an unknown printer took a
