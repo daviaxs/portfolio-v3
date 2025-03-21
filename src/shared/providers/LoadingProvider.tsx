@@ -45,7 +45,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
       ) : (
         <motion.div
           key="main-content"
-          className="flex flex-1"
+          className="flex flex-1 w-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
