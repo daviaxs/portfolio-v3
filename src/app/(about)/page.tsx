@@ -8,34 +8,10 @@ import { SocialLinks } from './SocialLinks'
 import { About } from './About'
 import { Separator } from '@/shared/components/Separator'
 import { Tools } from './Tools'
-import { JobCard } from './JobCard'
+import JobsCarousel from './JobsCarousel'
 
 export default function HomePage() {
   const { text } = useLanguage()
-
-  const jobs = [
-    {
-      jobTitle: 'UI/UX Designer',
-      jobType: 'Freelancer',
-      jobDate: '02/2023 - o momento',
-      jobDescription:
-        'Atuo na criação de interfaces digitais, desenvolvendo fluxos intuitivos e soluções visuais para otimizar a navegação. Realizei pesquisas, criei wireframes, protótipos interativos e testes de usabilidade para validar as soluções, garantindo uma experiência eficiente e funcional.',
-    },
-    {
-      jobTitle: 'Editor de vídeo',
-      jobType: 'Freelancer',
-      jobDate: '04/2022 - 05/2023',
-      jobDescription:
-        'Criei vídeos Lyric utilizando After Effects, desenvolvendo habilidades em animação, transições dinâmicas e construção de cenas. Atuei na edição completa dos vídeos, incluindo design de textos, efeitos visuais e ajustes de cores para garantir um resultado profissional e coerente com a identidade visual do projeto.',
-    },
-    {
-      jobTitle: 'Visual Design',
-      jobType: 'Freelancer',
-      jobDate: '09/2021 - 10/2023',
-      jobDescription:
-        'Produzi capas de música e thumbnails para YouTube e Spotify, aplicando técnicas avançadas de manipulação e edição de imagens. Desenvolvi habilidades em direção de arte, escolha de paleta de cores e tipografia, garantindo composições visuais impactantes e atraentes para diferentes plataformas digitais.',
-    },
-  ]
 
   return (
     <>
@@ -94,19 +70,7 @@ export default function HomePage() {
         </div>
 
         {/* EXPERIENCE */}
-        <div className="flex flex-col gap-4">
-          <h3 className="text-display-xs font-medium">Experiência</h3>
-
-          {jobs.map((job, index) => (
-            <JobCard
-              key={index}
-              jobTitle={job.jobTitle}
-              jobDate={job.jobDate}
-              jobType={job.jobType}
-              jobDescription={job.jobDescription}
-            />
-          ))}
-        </div>
+        <JobsCarousel />
       </div>
     </>
   )
