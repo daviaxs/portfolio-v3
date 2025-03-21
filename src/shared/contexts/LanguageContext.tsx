@@ -26,6 +26,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [text, setText] = useState<{ [key: string]: string }>({})
 
   useEffect(() => {
+    if (!localStorage.getItem('language')) {
+      localStorage.setItem('language', 'pt-br')
+    }
+
     const savedLanguage = localStorage.getItem('language') || 'pt-br'
     setLanguage(savedLanguage)
     fetchLanguage(savedLanguage)
