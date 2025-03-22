@@ -17,7 +17,7 @@ export function JobCard({
   jobDescription,
 }: JobCardProps) {
   return (
-    <div className="flex flex-col gap-4 p-4 w-full min-w-[460px] rounded-medium bg-gray-light-50 dark:bg-gray-dark-100 border border-gray-300 dark:border-gray-dark-200 shadow-1">
+    <div className="flex flex-col gap-4 p-4 w-full min-w-[470px] rounded-medium bg-gray-light-50 dark:bg-gray-dark-100 border border-gray-light-100 dark:border-gray-dark-200 shadow-1">
       <Image
         src={imgUrl}
         alt="imagem"

@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function JobsCarousel() {
   const [isScrolledLeft, setIsScrolledLeft] = useState(false)
-  const [isScrolledRight, setIsScrolledRight] = useState(true)
+  const [isScrolledRight, setIsScrolledRight] = useState(false)
   const scrollContainerRef = useRef(null)
 
   const jobs = [
